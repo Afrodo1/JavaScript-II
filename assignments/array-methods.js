@@ -100,9 +100,32 @@ console.log(ticketPriceTotal);
 
 // ==== Challenge 5: Be Creative ====
 // Now that you have used .forEach(), .map(), .filter(), and .reduce().  I want you to think of potential problems you could solve given the data set and the 5k fun run theme.  Try to create and then solve 3 unique problems using one or many of the array methods listed above.
+const groceryList = [
+   {amount: 2, item: 'milk', price: 2.99},
+   {amount: 1, item: 'eggs', price: 1.99},
+   {amount: 4, item: 'pudding', price: 5.99},
+   {amount: 2, item: 'ice cream', price:7.99}
+]
+ 
 
 // Problem 1
-
+const eachPrice = [];
+groceryList.forEach(function (totalPrice) {
+  let price = totalPrice.amount * totalPrice.price;
+  eachPrice.push(price);
+})
+console.log(eachPrice);
 // Problem 2
-
+const sortThem = groceryList.map((name) =>{
+  return name.item;
+});
+console.log(sortThem.sort());
 // Problem 3
+const total = 0;
+
+groceryTotal = groceryList.reduce((acc, cost) => {
+
+  return acc += (cost.amount * cost.price);
+
+}, 0);
+console.log(groceryTotal);
